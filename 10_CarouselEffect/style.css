@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Roboto;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #121212;
+}
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform: rotateX(-20deg)  translateY(-70px); /* Tilts ele backward 20deg and moves it up by 70px, give 3d effect */
+    transform-style: preserve-3d; /* Keeps 3D transformations of child elements intact */
+    perspective: 1400px; /* Sets the viewer's distance from the element to create a realistic 3D effect. A smaller number (e.g., 300px) = stronger perspective effect (more dramatic 3D), while a larger one (e.g., 1000px) = flatter look. */ 
+    user-select: none;  /* Prevents text/images inside from being selected by the user */
+    cursor: grab; 
+}
+.carousel-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    width: 12.5rem;
+    height: 12.5rem;
+    transform: translate3d(0, 0, -10px);
+    transform-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
